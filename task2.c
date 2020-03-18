@@ -44,6 +44,7 @@ int main() {
             {.a = 41, .b = 54, .c = 200, .d = 90},
             {.a = 1, .b = 892, .c = 3, .d = 4},
             {.a = 21, .b = 2, .c = 3, .d = 4},
+            {.a = -21, .b = 3, .c = 3, .d = 4},
         };
 
     foreach(struct Input *input, inputs) {
