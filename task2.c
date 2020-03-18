@@ -18,23 +18,11 @@ struct Input {
     int d;
 };
 
+#define max(a,b) (a>b?a:b)
+
 int maxOfFour(struct Input input) // Даже не придумывается как без массивов сделать меньше чем за N 
 {
-    int max = input.a;
-
-    if (input.b > input.a) {
-        max = input.b;
-    } 
-
-    if (input.c > max) {
-        max = input.c;
-    }
-
-    if (input.d > max) {
-        max = input.d;
-    }
-    
-    return max;
+    return  max(input.d, max(input.c, max(input.b, input.a)));
 }
 
 
