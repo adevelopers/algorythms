@@ -38,6 +38,7 @@ int main() {
 
 
     // Задание 2.
+    // b. рекурсивно;
     printf("\n\nЗадание 2.\n");
     for (int i=0; i <= 16; i++) {
         printf("2^%i=%i\n",i, iPow(2, i));
