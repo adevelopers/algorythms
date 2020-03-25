@@ -18,7 +18,21 @@ struct Input {
     int d;
 };
 
+typedef struct Value {
+    int a;
+    int b;
+}
+
 #define max(a,b) (a>b?a:b)
+
+typedef struct Queue {
+
+} Queue;
+
+int maximum(int a, int b, int cnt, int n) {
+    if (cnt > n) { return a < b ? b : a; }; 
+    return a < b ? maximum(b, a, ++cnt, n): a;
+}
 
 int maxOfFour(struct Input input) // Даже не придумывается как без массивов сделать меньше чем за N 
 {
@@ -35,9 +49,6 @@ int main() {
             {.a = -21, .b = 3, .c = 3, .d = 4},
         };
 
-    foreach(struct Input *input, inputs) {
-        int max = maxOfFour(*input);
-        printf("Максимальное число -> %d\n", max);
-    }
-
+    int r = maximum(inputs[0].a, inputs[0].b, 0, 4);
+    printf("%d\n", r);
 }
