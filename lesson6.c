@@ -15,15 +15,30 @@ unsigned int getHash(const char *str) {
 
 
 
-
-int main() {
-    char input[30] = "Algorythms2..";
-    unsigned int hash = getHash(input);
-    printf("%u", hash);
-
-    return 0;
-}
-
 // 2. Переписать программу, реализующую двоичное дерево поиска.
 //      а) Добавить в него обход дерева различными способами;
 //      б) Реализовать поиск в двоичном дереве поиска;
+
+typedef struct Node {
+    int value;
+    struct Node *left;
+    struct Node *right;
+    struct Node *parent;
+} Node;
+
+
+
+
+int main() {
+    printf("task 1");
+    char input[30] = "Algorythms2..";
+    unsigned int hash = getHash(input);
+    printf("Hash of string: %u", hash);
+
+
+    printf("task 2");
+
+
+
+    return 0;
+}
